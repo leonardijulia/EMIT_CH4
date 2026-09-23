@@ -1,0 +1,22 @@
+_target_: src.models.methane_module.MethaneLitModule
+
+net:
+  _target_: src.models.components.unet.UNet
+  in_channels: 285
+  out_channels: 1
+
+criterion:
+  _target_: torch.nn.BCEWithLogitsLoss
+
+optimizer:
+  _target_: torch.optim.AdamW
+  _partial_: true
+  lr: 0.001
+  weight_decay: 0.01
+  betas: [0.9, 0.999]
+
+scheduler:
+  _target_: torch.optim.lr_scheduler.CosineAnnealingLR
+  _partial_: true
+  T_max: 50
+  eta_min: 1e-6

@@ -1,0 +1,4 @@
+_target_: src.data.datamodule.MethaneDataModule
+batch_size: 16
+data_dir: ${paths.data_dir}
+num_workers: 4

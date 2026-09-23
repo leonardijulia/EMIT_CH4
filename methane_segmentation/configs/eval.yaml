@@ -1,0 +1,13 @@
+defaults:
+  - _self_
+  - data: emit.yaml           
+  - model: methane.yaml       
+  - logger: wandb.yaml        
+  - trainer: default.yaml     
+  - paths: default.yaml       
+  - hydra: default.yaml      
+
+task_name: "methane_evaluation"
+
+# Path to the checkpoint you want to evaluate
+ckpt_path: ??? # Force specifying a checkpoint path from CLI or config

@@ -1,0 +1,9 @@
+region,acronym,split
+North America,AM,train
+North Africa & Middle East,ME,train
+Europe,EU,train
+Stans,ST,train
+China & Mongolia,CM,val
+Australia,AU,val
+SE Asia,AS,test
+South America & South Africa,SA,test
